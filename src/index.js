@@ -1,14 +1,30 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import YTSearch from 'youtube-api-search';
+import SearchBar from './search_bar';
+
+const API_KEY = 'AIzaSyAB7L-ix78nLsT9kkJMezDGXIau6dC4Mb4';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+
+    this.state={ videos : [] };
+
+    YTSearch({key : API_KEY, term : 'surfboards'}, (data) => {
+      this.setState({videos : data});
+    });
+  }
+  render() {
+    return (
+    <div>
+      <SearchBar/>
+    </div>
+    );
+  }
+}
 
 
 ReactDOM.render(
     <App />, document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
