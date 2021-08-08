@@ -19,7 +19,7 @@
 }
 
 .list-group-item :hover{
-    background-color : #eee;
+   background-color : gray;
 }
 
 .search-bar input{
