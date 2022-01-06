@@ -13,10 +13,11 @@ export default function Navigation(){
 
     return(
         <div className="HeaderContainer">
-            <div className="HeaderBox">
-                <Link to="HomeContainer" className="HeaderTitle" spy={true} smooth={true}>
-                    AG
+            <Link to="HomeContainer" className="HeaderTitle" spy={true} smooth={true}>
+                    Ag.
                 </Link>
+            <div className="HeaderBox">
+                
             <div className= "HeaderMenu">
                 <Link to="HomeContainer" className="NavBtn" spy={true} smooth={true}>
                     HOME
