@@ -1,0 +1,58 @@
+div {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.HomeContainer {
+  position: relative;
+  background-color: black;
+  height: 1000px;
+  color: white;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.HomeBox {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 10%;
+  margin-left: 7.5%;
+}
+
+.HomeBox h1 {
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.HomeBoxQuote {
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  margin-right: 20%;
+  font-weight: 200;
+}
+
+.HomeLink {
+  text-decoration: none;
+  color: white;
+  margin-top: 7%;
+  font-size: 20px;
+}
+
+.HomeLink a {
+  color: white;
+  text-decoration: none;
+  font-weight: 50;
+}
+
+.HomeLink a :hover {
+  text-decoration: none;
+}
+
+.blogLink {
+  margin-left: 40px;
+}
+
+.HomeLink span {
+  margin-left: 40px;
+}

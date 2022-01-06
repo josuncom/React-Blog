@@ -1,0 +1,26 @@
+.HeaderContainer {
+  background-color: black;
+  width: 100%;
+  color: white;
+  position: fixed;
+  z-index: 999;
+  height: 100px;
+  opacity: 0.9;
+}
+
+.HeaderContainer div {
+  opacity: 1;
+}
+
+.NavBtn {
+  padding: 15px;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.NavBtn:hover {
+  text-decoration: none;
+  color: white;
+}
