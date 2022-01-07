@@ -1,8 +1,10 @@
 import React, {useState, useEffect } from "react";
 import '../components/Project.css';
-import ScrollMenu from 'react-horizontal-scrolling-menu';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Project() {
+    var Carousel = require('react-responsive-carousel').Carousel;
+
     return(
         <>
             <div className="ProjectContainer">
@@ -26,8 +28,26 @@ export default function Project() {
                         <button className="VisitBtn1">V I S I T</button>
                     </a>
                 </div>
+            
             <div className="ProjectImg1">
-                
+                <Carousel showArrows={true}>
+                    <div>
+                        <img src={require('./images/Home.JPG').default}></img>
+                        <p className="legend">Home</p>
+                    </div>
+                    <div>
+                        <img src={require('./images/1.JPG').default}></img>
+                        <p className="legend">Who Am I ?</p>
+                    </div>
+                    <div>
+                        <img src={require('./images/2.JPG').default}></img>
+                        <p className="legend">What I Like ?</p>
+                    </div>
+                    <div>
+                        <img src={require('./images/3.JPG').default}></img>
+                        <p className="legend">Contact</p>
+                    </div>
+                </Carousel>
             </div>
             </div>
         </>

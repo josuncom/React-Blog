@@ -38,7 +38,12 @@
 }
 
 .ProjectImg1 {
-  display: grid;
+  margin-top: 15%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
 }
 
 button {
