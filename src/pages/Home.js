@@ -11,7 +11,8 @@ export default function Home() {
                         <h1>
                             Hello,<br/>I'm  Eun  Cho
                         </h1><br/>
-                        <p>Junior Web FrontEnd Developer</p>
+                        <p>Junior Web FrontEnd Developer</p><br/>
+                        <hr className="HomeLine"/>
                     </div>
                     <div className="HomeBoxQuote">
                         The most beautiful thing in the world is,<br/><br/> of course,<br/><br/>the world itself.

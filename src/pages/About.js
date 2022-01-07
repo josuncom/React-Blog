@@ -9,7 +9,7 @@ export default function About() {
             <div className="AboutContainer">
                 <div className="AboutBox">
                 <div className="WhoAmI">
-                <h1>Who Am I?</h1><br/><br/>
+                <h1>Who Am I ?</h1><hr className="AboutLine"/><br/><br/>
                     <ReactTypingEffect speed="100" typingDelay="1000" eraseSpeed="100" eraseDelay="9000" 
                     text={["1998.07.20 출생"]}/><br/><br/>
                     <ReactTypingEffect speed="100" typingDelay="1000" eraseSpeed="100" eraseDelay="9000" 
@@ -20,7 +20,7 @@ export default function About() {
                     text={["스마트ICT융합공학과 전공"]}/>
                 </div>
                 <div className="WhatILike">
-                <h1>What I Like?</h1><br/><br/>
+                <h1>What I Like ?</h1><hr className="AboutLine"/><br/><br/>
                     <ReactTypingEffect speed="100" typingDelay="1000" eraseSpeed="100" eraseDelay="9000" className="typeLike" 
                     text={["사람들과의 만남을 좋아합니다."]}/><br/><br/>
                     <ReactTypingEffect speed="100" typingDelay="1000" eraseSpeed="100" eraseDelay="9000" className="typeLike" 

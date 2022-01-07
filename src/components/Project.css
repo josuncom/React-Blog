@@ -1,6 +1,58 @@
 .ProjectContainer {
   background-color: black;
   color: white;
-  height: 1000px;
-  padding-top: 50px;
+  height: 2400px;
+  padding-top: 150px;
+}
+
+.ProjectBox {
+  padding-left: 7.5%;
+}
+
+.title1 {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.ProjectLine1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 180px;
+  color: white;
+  background: white;
+  border: none;
+  height: 1px;
+}
+
+.ProjectName1 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.TechStacks {
+  font-size: 20px;
+}
+
+.VisitBtn1 {
+  margin-left: 40px;
+}
+
+.ProjectImg1 {
+  display: grid;
+}
+
+button {
+  font-size: 12px;
+  background-color: gray;
+  color: white;
+  width: 120px;
+  height: 50px;
+  border: none;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
 }
