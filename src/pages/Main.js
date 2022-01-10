@@ -7,6 +7,7 @@ import Project from "./Projects";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Connect from "./Connect";
+import "../components/Main.css";
 
 import { Fragment } from "react";
 

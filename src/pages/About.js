@@ -7,6 +7,7 @@ export default function About() {
     return(
         <>
             <div className="AboutContainer">
+            <div className="AboutContainerTitle">About Me</div>
                 <div className="AboutBox">
                 <div className="WhoAmI">
                 <h1>Who Am I ?</h1><hr className="AboutLine"/><br/><br/>
