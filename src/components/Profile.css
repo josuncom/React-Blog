@@ -2,5 +2,29 @@
   background-color: black;
   color: white;
   height: 1000px;
-  padding-top: 50px;
+  padding-top: 100px;
+}
+
+.ProfileBox {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 100px;
+}
+
+.ProfileTitle {
+  font-size: 40px;
+  text-align: center;
+}
+
+.ProfileLine {
+  width: 500px;
+}
+
+.ProfileContents {
+  font-size: 18px;
+}
+img {
+  margin-left: 25%;
+  width: 300px;
 }
