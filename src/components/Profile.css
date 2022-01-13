@@ -1,8 +1,8 @@
 .ProfileContainer {
   background-color: black;
   color: white;
-  height: 1000px;
-  padding-top: 100px;
+  height: 900px;
+  margin-top: 150px;
 }
 
 .ProfileBox {
@@ -22,9 +22,60 @@
 }
 
 .ProfileContents {
-  font-size: 18px;
+  font-size: 14px;
+  color: rgb(143, 140, 140);
+  transition: 1s;
+  margin-top: 20px;
 }
+
+.Quote {
+  font-size: 25px;
+  font-weight: 600;
+  transition: 1s;
+}
+
+.Contents {
+  margin-top: 25px;
+}
+
+.Contents span {
+  transition: 0.5s;
+}
+
 img {
-  margin-left: 25%;
-  width: 300px;
+  margin-left: 40%;
+  width: 230px;
+}
+
+.Quote:hover,
+.Contents span:hover {
+  color: white;
+  transition: 0.5s;
+}
+
+.ProfileSkills {
+  margin-top: 5%;
+}
+
+.SkillTitle {
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.SkillTitle hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -0.1%;
+  width: 70px;
+}
+
+.SkillBox {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.Skill {
+  text-align: center;
 }

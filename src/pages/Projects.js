@@ -33,19 +33,19 @@ export default function Project() {
             <div className="ProjectImg1">
                 <Carousel showArrows={true}>
                     <div>
-                        <img src={require('./images/Home.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/Home.JPG').default}></img>
                         <p className="legend">Home</p>
                     </div>
                     <div>
-                        <img src={require('./images/1.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/1.JPG').default}></img>
                         <p className="legend">Who Am I ?</p>
                     </div>
                     <div>
-                        <img src={require('./images/2.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/2.JPG').default}></img>
                         <p className="legend">What I Like ?</p>
                     </div>
                     <div>
-                        <img src={require('./images/3.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/3.JPG').default}></img>
                         <p className="legend">Contact</p>
                     </div>
                 </Carousel>
@@ -76,15 +76,15 @@ export default function Project() {
             <div className="ProjectImg1">
                 <Carousel showArrows={true}>
                     <div>
-                        <img src={require('./images/2-1.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/2-1.JPG').default}></img>
                         <p className="legend">초기 화면</p>
                     </div>
                     <div>
-                        <img src={require('./images/2-2.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/2-2.JPG').default}></img>
                         <p className="legend">이름, 할 일 정리</p>
                     </div>
                     <div>
-                        <img src={require('./images/2-3.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/2-3.JPG').default}></img>
                         <p className="legend">랜덤 배경화면, 명언 구현</p>
                     </div>
                 </Carousel>
@@ -114,23 +114,23 @@ export default function Project() {
             <div className="ProjectImg1">
                 <Carousel showArrows={true}>
                     <div>
-                        <img src={require('./images/3-1.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/3-1.JPG').default}></img>
                         <p className="legend">홈 페이지</p>
                     </div>
                     <div>
-                        <img src={require('./images/3-2.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/3-2.JPG').default}></img>
                         <p className="legend">스터디룸 소개 페이지</p>
                     </div>
                     <div>
-                        <img src={require('./images/3-3.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/3-3.JPG').default}></img>
                         <p className="legend">로그인 페이지</p>
                     </div>
                     <div>
-                        <img src={require('./images/3-4.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/3-4.JPG').default}></img>
                         <p className="legend">예약 창</p>
                     </div>
                     <div>
-                        <img src={require('./images/3-5.JPG').default}></img>
+                        <img className="ProjectImg" src={require('./images/3-5.JPG').default}></img>
                         <p className="legend">회원 정보 페이지</p>
                     </div>
                 </Carousel>

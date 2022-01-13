@@ -70,6 +70,10 @@
   position: relative;
 }
 
+.ProjectImg {
+  margin-left: 0%;
+}
+
 button {
   font-size: 12px;
   background-color: gray;
