@@ -9,6 +9,7 @@ div {
   color: white;
   padding-top: 50px;
   z-index: 1;
+  opacity: 0;
 }
 
 .HomeBox {
@@ -56,4 +57,9 @@ div {
 
 .HomeLine {
   width: 200px;
+}
+
+.HomeContainerScrolled {
+  opacity: 1;
+  transition: 5s;
 }

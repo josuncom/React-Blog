@@ -1,11 +1,34 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import '../components/Home.css';
-import { Link } from 'react-router-dom';
 
 export default function Home() {
+
+    const [isHomeContainerScrolled, setIsHomeContainersScrolled] = useState(false);    // Home의 Top 값
+    const homeContainer = document.getElementsByClassName('HomeContainer');
+    const [homeContainerFromTop, setHomeContainerFromTop] = useState(0);
+
+    const showHomeContainer = () => {
+        if(homeContainerFromTop <= 100){
+            setIsHomeContainersScrolled(true);
+        }
+    }
+
+    const listener = () => {
+        if(homeContainer[0])
+        {
+            setHomeContainerFromTop(homeContainer[0].getBoundingClientRect().top);
+        }
+    }
+
+    useEffect(() => {
+    window.addEventListener('scroll', listener);
+    showHomeContainer(homeContainerFromTop);
+        }
+    );
+
     return(
         <>
-            <div className="HomeContainer">
+            <div className={isHomeContainerScrolled ? 'HomeContainer HomeContainerScrolled' : 'HomeContainer'}>
                 <div className="HomeBox">
                     <div className="HomeBoxIntro">
                         <h1>

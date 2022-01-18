@@ -5,9 +5,32 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function Project() {
     var Carousel = require('react-responsive-carousel').Carousel;
 
+    const [isProjectContainerScrolled, setIsProjectContainersScrolled] = useState(false);    // Home의 Top 값
+    const projectContainer = document.getElementsByClassName('ProjectContainer');
+    const [projectContainerFromTop, setProjectContainerFromTop] = useState(5000);
+
+    const showProjectContainer = () => {
+        if(projectContainerFromTop <= 1000){
+            setIsProjectContainersScrolled  (true);
+        }
+    }
+
+    const listener = () => {
+        if(projectContainer[0])
+        {
+            setProjectContainerFromTop(projectContainer[0].getBoundingClientRect().top);
+        }
+    }
+
+    useEffect(() => {
+    window.addEventListener('scroll', listener);
+    showProjectContainer(projectContainerFromTop);
+        }
+    );
+
     return(
         <>
-            <div className="ProjectContainer">
+            <div className={isProjectContainerScrolled ? 'ProjectContainer ProjectContainerScrolled' : 'ProjectContainer'}>
                      <div className="ProjectContainerTitle">Projects</div>
                 <div className="ProjectBox1">
                     <span className="title1">Project 1 &nbsp; | &nbsp; About Me </span>

@@ -1,9 +1,16 @@
 .ProjectContainer {
+  position: relative;
   background-color: black;
   color: white;
   height: 4400px;
+  z-index: 1;
+  opacity: 0;
 }
 
+.ProjectContainerScrolled {
+  opacity: 1;
+  transition: 5s;
+}
 .ProjectBox1 {
   padding-top: 100px;
   padding-left: 7.5%;
