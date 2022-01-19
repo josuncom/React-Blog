@@ -14,10 +14,10 @@
 }
 
 .ProjectImg1 {
-  margin-top: 10%;
   width: 60%;
+  margin-top: 10%;
+  margin-left: 14%;
   text-align: center;
-  position: relative;
 }
 
 .ProjectBox1Scrolled {
@@ -42,11 +42,10 @@
 }
 
 .ProjectImg2 {
-  margin-top: 10%;
   width: 60%;
-  margin-left: 20%;
+  margin-top: 10%;
+  margin-left: 22%;
   text-align: center;
-  position: relative;
 }
 
 .ProjectBox2Scrolled {
@@ -124,8 +123,8 @@ button:hover {
 .ProjectImg3 {
   margin-top: 10%;
   width: 60%;
+  margin-left: 14%;
   text-align: center;
-  position: relative;
 }
 
 .ProjectBox3Scrolled {
