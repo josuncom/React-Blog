@@ -10,7 +10,7 @@
   padding-left: 7.5%;
   z-index: 1;
   opacity: 0;
-  transition: 3s;
+  transition: 1s;
 }
 
 .ProjectImg1 {
@@ -22,7 +22,7 @@
 
 .ProjectBox1Scrolled {
   opacity: 1;
-  transition: 3s;
+  transition: 2s;
 }
 
 .ProjectContainerTitle {
@@ -38,7 +38,7 @@
   padding-right: 7.5%;
   z-index: 1;
   opacity: 0;
-  transition: 3s;
+  transition: 1s;
 }
 
 .ProjectImg2 {
@@ -51,7 +51,7 @@
 
 .ProjectBox2Scrolled {
   opacity: 1;
-  transition: 3s;
+  transition: 2s;
 }
 
 .title1 {
@@ -118,7 +118,7 @@ button:hover {
   padding-left: 7.5%;
   z-index: 1;
   opacity: 0;
-  transition: 3s;
+  transition: 1s;
 }
 
 .ProjectImg3 {
@@ -130,5 +130,5 @@ button:hover {
 
 .ProjectBox3Scrolled {
   opacity: 1;
-  transition: 3s;
+  transition: 2s;
 }
