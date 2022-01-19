@@ -5,34 +5,64 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function Project() {
     var Carousel = require('react-responsive-carousel').Carousel;
 
-    const [isProjectContainerScrolled, setIsProjectContainersScrolled] = useState(false);    // Home의 Top 값
-    const projectContainer = document.getElementsByClassName('ProjectContainer');
-    const [projectContainerFromTop, setProjectContainerFromTop] = useState(5000);
+    const [isProjectBox1Scrolled, setIsProjectBox1Scrolled] = useState(false);
+    const [isProjectBox2Scrolled, setIsProjectBox2Scrolled] = useState(false);    
+    const [isProjectBox3Scrolled, setIsProjectBox3Scrolled] = useState(false);  // Home의 Top 값
 
-    const showProjectContainer = () => {
-        if(projectContainerFromTop <= 1000){
-            setIsProjectContainersScrolled  (true);
+    const projectBox1 = document.getElementsByClassName('ProjectBox1');
+    const projectBox2 = document.getElementsByClassName('ProjectBox2');
+    const projectBox3 = document.getElementsByClassName('ProjectBox3');
+
+    const [projectBox1FromTop, setProjectBox1FromTop] = useState(5000);
+    const [projectBox2FromTop, setProjectBox2FromTop] = useState(5000);
+    const [projectBox3FromTop, setProjectBox3FromTop] = useState(5000);
+
+    const showProjectBox = () => {
+        if(projectBox1FromTop <= 1000){
+            setIsProjectBox1Scrolled(true);
+        }
+
+        if(projectBox2FromTop <= 600){
+            setIsProjectBox2Scrolled(true);
+            setIsProjectBox1Scrolled(false);
+        }
+
+        if(projectBox3FromTop <= 400){
+            setIsProjectBox3Scrolled(true);
+            setIsProjectBox2Scrolled(false);
         }
     }
 
     const listener = () => {
-        if(projectContainer[0])
+        if(projectBox1[0])
         {
-            setProjectContainerFromTop(projectContainer[0].getBoundingClientRect().top);
+            setProjectBox1FromTop(projectBox1[0].getBoundingClientRect().top);
+        }
+
+        if(projectBox2[0])
+        {
+            setProjectBox2FromTop(projectBox2[0].getBoundingClientRect().top);
+        }
+
+        if(projectBox3[0])
+        {
+            setProjectBox3FromTop(projectBox3[0].getBoundingClientRect().top);
         }
     }
 
     useEffect(() => {
     window.addEventListener('scroll', listener);
-    showProjectContainer(projectContainerFromTop);
+    showProjectBox(projectBox1FromTop);
+    showProjectBox(projectBox2FromTop);
+    showProjectBox(projectBox3FromTop);
         }
     );
 
     return(
         <>
-            <div className={isProjectContainerScrolled ? 'ProjectContainer ProjectContainerScrolled' : 'ProjectContainer'}>
+            <div className='ProjectContainer'>
                      <div className="ProjectContainerTitle">Projects</div>
-                <div className="ProjectBox1">
+                <div className={isProjectBox1Scrolled ? 'ProjectBox1 ProjectBox1Scrolled' : 'ProjectBox1'}>
                     <span className="title1">Project 1 &nbsp; | &nbsp; About Me </span>
                     <hr className="ProjectLine1"/>
                     <p className="ProjectName1">간단한 자기소개 페이지 프로젝트</p>
@@ -51,7 +81,7 @@ export default function Project() {
                     <a href="https://josuncom.github.io/blog_project/mainPage.html" target="_blank">
                         <button className="VisitBtn1">V I S I T</button>
                     </a>
-                </div>
+                
             
             <div className="ProjectImg1">
                 <Carousel showArrows={true}>
@@ -73,8 +103,9 @@ export default function Project() {
                     </div>
                 </Carousel>
             </div>
+            </div>
 
-            <div className="ProjectBox2">
+            <div className={isProjectBox2Scrolled? 'ProjectBox2 ProjectBox2Scrolled' : 'ProjectBox2'}>
                     <span className="title1">Project 2 &nbsp; | &nbsp; Like-Legend </span>
                     <hr className="ProjectLine2"/>
                     <p className="ProjectName1">To-Do Web Application</p>
@@ -94,9 +125,8 @@ export default function Project() {
                     <a href="https://josuncom.github.io/Like-Legend-main/" target="_blank"> 
                         <button className="VisitBtn1">V I S I T</button>
                     </a>
-                </div>
-            
-            <div className="ProjectImg1">
+                
+            <div className="ProjectImg2">
                 <Carousel showArrows={true}>
                     <div>
                         <img className="ProjectImg" src={require('./images/2-1.JPG').default}></img>
@@ -112,7 +142,10 @@ export default function Project() {
                     </div>
                 </Carousel>
             </div>
-            <div className="ProjectBox3">
+        </div>
+
+
+            <div className={isProjectBox3Scrolled ? 'ProjectBox3 ProjectBox3Scrolled' : 'ProjectBox3'}>
                     <span className="title1">Project 3 &nbsp; | &nbsp; Iroom-Clone </span>
                     <hr className="ProjectLine1"/>
                     <p className="ProjectName1">Clone Coding using ReactJS</p>
@@ -132,9 +165,8 @@ export default function Project() {
                     <a href="https://jseo9732.github.io/iroom-clone/profile" target="_blank"> 
                         <button className="VisitBtn1">V I S I T</button>
                     </a>
-                </div>
-            
-            <div className="ProjectImg1">
+                    
+            <div className="ProjectImg3">
                 <Carousel showArrows={true}>
                     <div>
                         <img className="ProjectImg" src={require('./images/3-1.JPG').default}></img>
@@ -158,6 +190,8 @@ export default function Project() {
                     </div>
                 </Carousel>
             </div>
+        </div>
+
             </div>
 
             

@@ -3,17 +3,26 @@
   background-color: black;
   color: white;
   height: 4400px;
-  z-index: 1;
-  opacity: 0;
 }
 
-.ProjectContainerScrolled {
-  opacity: 1;
-  transition: 5s;
-}
 .ProjectBox1 {
   padding-top: 100px;
   padding-left: 7.5%;
+  z-index: 1;
+  opacity: 0;
+  transition: 3s;
+}
+
+.ProjectImg1 {
+  margin-top: 10%;
+  width: 60%;
+  text-align: center;
+  position: relative;
+}
+
+.ProjectBox1Scrolled {
+  opacity: 1;
+  transition: 3s;
 }
 
 .ProjectContainerTitle {
@@ -27,6 +36,22 @@
   text-align: right;
   padding-top: 220px;
   padding-right: 7.5%;
+  z-index: 1;
+  opacity: 0;
+  transition: 3s;
+}
+
+.ProjectImg2 {
+  margin-top: 10%;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+  position: relative;
+}
+
+.ProjectBox2Scrolled {
+  opacity: 1;
+  transition: 3s;
 }
 
 .title1 {
@@ -68,15 +93,6 @@
   margin-left: 40px;
 }
 
-.ProjectImg1 {
-  margin-top: 10%;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  position: relative;
-}
-
 .ProjectImg {
   margin-left: 0%;
 }
@@ -100,4 +116,19 @@ button:hover {
 .ProjectBox3 {
   padding-top: 220px;
   padding-left: 7.5%;
+  z-index: 1;
+  opacity: 0;
+  transition: 3s;
+}
+
+.ProjectImg3 {
+  margin-top: 10%;
+  width: 60%;
+  text-align: center;
+  position: relative;
+}
+
+.ProjectBox3Scrolled {
+  opacity: 1;
+  transition: 3s;
 }
