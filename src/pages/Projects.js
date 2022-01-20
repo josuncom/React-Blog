@@ -13,23 +13,37 @@ export default function Project() {
     const projectBox2 = document.getElementsByClassName('ProjectBox2');
     const projectBox3 = document.getElementsByClassName('ProjectBox3');
 
-    const [projectBox1FromTop, setProjectBox1FromTop] = useState(5000);
-    const [projectBox2FromTop, setProjectBox2FromTop] = useState(5000);
-    const [projectBox3FromTop, setProjectBox3FromTop] = useState(5000);
+    const [projectBox1FromTop, setProjectBox1FromTop] = useState(8000);
+    const [projectBox2FromTop, setProjectBox2FromTop] = useState(10000);
+    const [projectBox3FromTop, setProjectBox3FromTop] = useState(12000);
+
+
+    console.log('1 : ', projectBox1FromTop);
+    console.log('2 : ', projectBox2FromTop);
+    console.log('3 : ', projectBox3FromTop);
 
     const showProjectBox = () => {
-        if(projectBox1FromTop <= 1000){
-            setIsProjectBox1Scrolled(true);
-        }
-
-        if(projectBox2FromTop <= 600){
-            setIsProjectBox2Scrolled(true);
+        if(projectBox1FromTop >= 750){      // 올릴 때 1 사라지게 함
             setIsProjectBox1Scrolled(false);
         }
 
-        if(projectBox3FromTop <= 400){
-            setIsProjectBox3Scrolled(true);
+        if(projectBox1FromTop <= 350){      // 내릴 때, 올릴 때 1 나타나게 함
+            setIsProjectBox1Scrolled(true);
             setIsProjectBox2Scrolled(false);
+        }
+
+        if(projectBox2FromTop <= 140){  // 내릴 때 2 나타나고 1 사라짐
+            setIsProjectBox2Scrolled(true); 
+            setIsProjectBox1Scrolled(false);
+        }
+
+        if(projectBox3FromTop <= 250){  // 내릴 때 3 나타나고 2 사라짐
+            setIsProjectBox2Scrolled(false); 
+            setIsProjectBox3Scrolled(true); 
+        }
+
+        if(projectBox3FromTop <= -1200){    // 내릴 때 3 사라짐
+            setIsProjectBox3Scrolled(false);
         }
     }
 
@@ -49,6 +63,8 @@ export default function Project() {
             setProjectBox3FromTop(projectBox3[0].getBoundingClientRect().top);
         }
     }
+
+    
 
     useEffect(() => {
     window.addEventListener('scroll', listener);

@@ -1,13 +1,34 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import '../components/Profile.css';
 import ReactTypingEffect from 'react-typing-effect';
 
 export default function Profile() {
+    const [isProfileBoxScrolled, setIsProfileBoxScrolled] = useState(false);
+    const profileBox = document.getElementsByClassName('ProfileBox');
+    const [ProfileBoxFromTop, setProfileBoxFromTop] = useState(5000);
+
+    const showProfileBox = () =>{
+        if(ProfileBoxFromTop <= 1000)
+        setIsProfileBoxScrolled(true);
+    }
+
+    const listener = () =>{
+        if(profileBox[0])
+        {
+            setProfileBoxFromTop(profileBox[0].getBoundingClientRect().top);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', listener);
+        showProfileBox(ProfileBoxFromTop);
+    });
+
     return(
         <>
             <div className="ProfileContainer">
                 <div className="ProfileTitle">Profile</div>
-                    <div className="ProfileBox">
+                    <div className={isProfileBoxScrolled ? 'ProfileBox ProfileBoxScrolled' : 'ProfileBox'}>
                         <div className="ProfileImage">
                             <img src={require('./images/조은.jpg').default}/>
                         </div>

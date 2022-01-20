@@ -21,8 +21,8 @@ export default function Home() {
     }
 
     useEffect(() => {
-    window.addEventListener('scroll', listener);
-    showHomeContainer(homeContainerFromTop);
+            window.addEventListener('scroll', listener);
+            showHomeContainer(homeContainerFromTop);
         }
     );
 
