@@ -3,32 +3,38 @@ import '../components/Profile.css';
 import ReactTypingEffect from 'react-typing-effect';
 
 export default function Profile() {
-    const [isProfileBoxScrolled, setIsProfileBoxScrolled] = useState(false);
-    const profileBox = document.getElementsByClassName('ProfileBox');
-    const [ProfileBoxFromTop, setProfileBoxFromTop] = useState(5000);
+    const [isProfileContainerScrolled, setIsProfileContainerScrolled] = useState(false);
+    const profileContainer = document.getElementsByClassName('ProfileContainer');
+    const [ProfileContainerFromTop, setProfileContainerFromTop] = useState(5000);
 
-    const showProfileBox = () =>{
-        if(ProfileBoxFromTop <= 1000)
-        setIsProfileBoxScrolled(true);
+    const showProfileContainer = () =>{
+        if(ProfileContainerFromTop <= 500)
+        setIsProfileContainerScrolled(true);
+
+        if(ProfileContainerFromTop <= -500 || ProfileContainerFromTop >= 700){
+            setIsProfileContainerScrolled(false);
+        }
     }
 
     const listener = () =>{
-        if(profileBox[0])
+        if(profileContainer[0])
         {
-            setProfileBoxFromTop(profileBox[0].getBoundingClientRect().top);
+            setProfileContainerFromTop(profileContainer[0].getBoundingClientRect().top);
         }
     }
 
     useEffect(() => {
         window.addEventListener('scroll', listener);
-        showProfileBox(ProfileBoxFromTop);
+        showProfileContainer(ProfileContainerFromTop);
     });
+
+    console.log(ProfileContainerFromTop);
 
     return(
         <>
-            <div className="ProfileContainer">
+            <div className={isProfileContainerScrolled ? 'ProfileContainer ProfileContainerScrolled' : 'ProfileContainer'}>
                 <div className="ProfileTitle">Profile</div>
-                    <div className={isProfileBoxScrolled ? 'ProfileBox ProfileBoxScrolled' : 'ProfileBox'}>
+                    <div className='ProfileBox'>
                         <div className="ProfileImage">
                             <img src={require('./images/조은.jpg').default}/>
                         </div>

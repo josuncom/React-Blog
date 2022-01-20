@@ -17,11 +17,6 @@ export default function Project() {
     const [projectBox2FromTop, setProjectBox2FromTop] = useState(10000);
     const [projectBox3FromTop, setProjectBox3FromTop] = useState(12000);
 
-
-    console.log('1 : ', projectBox1FromTop);
-    console.log('2 : ', projectBox2FromTop);
-    console.log('3 : ', projectBox3FromTop);
-
     const showProjectBox = () => {
         if(projectBox1FromTop >= 750){      // 올릴 때 1 사라지게 함
             setIsProjectBox1Scrolled(false);
@@ -45,7 +40,7 @@ export default function Project() {
         if(projectBox3FromTop >= 350){
             setIsProjectBox3Scrolled(false);
         }
-        
+
         if(projectBox3FromTop <= -1200){    // 내릴 때 3 사라짐
             setIsProjectBox3Scrolled(false);
         }

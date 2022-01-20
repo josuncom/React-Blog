@@ -3,6 +3,13 @@
   color: white;
   height: 900px;
   margin-top: 150px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.ProfileContainerScrolled {
+  opacity: 1;
+  transition: 2s;
 }
 
 .ProfileBox {
@@ -10,14 +17,8 @@
   display: grid;
   grid-template-columns: 50% 50%;
   padding-top: 100px;
-  opacity: 0;
-  z-index: 1;
-  transition: 3s;
-}
 
-.isProfileBoxScrolled {
-  opacity: 1;
-  transition: 3s;
+  transition: 2s;
 }
 
 .ProfileTitle {
