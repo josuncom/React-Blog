@@ -30,7 +30,7 @@ export default function Project() {
         if(projectBox1FromTop <= 350){      // 내릴 때, 올릴 때 1 나타나게 함
             setIsProjectBox1Scrolled(true);
             setIsProjectBox2Scrolled(false);
-        }
+        }   
 
         if(projectBox2FromTop <= 140){  // 내릴 때 2 나타나고 1 사라짐
             setIsProjectBox2Scrolled(true); 
@@ -42,6 +42,10 @@ export default function Project() {
             setIsProjectBox3Scrolled(true); 
         }
 
+        if(projectBox3FromTop >= 350){
+            setIsProjectBox3Scrolled(false);
+        }
+        
         if(projectBox3FromTop <= -1200){    // 내릴 때 3 사라짐
             setIsProjectBox3Scrolled(false);
         }
