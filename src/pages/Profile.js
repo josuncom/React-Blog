@@ -28,7 +28,7 @@ export default function Profile() {
         showProfileContainer(ProfileContainerFromTop);
     });
 
-    console.log(ProfileContainerFromTop);
+    
 
     return(
         <>
